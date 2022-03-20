@@ -14,11 +14,11 @@ public class ResourcesManagementSystem {
 		System.out.println("1. Add Schedule");
 		System.out.println("2. Delete Schedule");
 		System.out.println("3. Edit Schedule");
-		System.out.println("4. View Schedule"); //Schedule을 보는 항목이 없어서 새로 추가했습니다.
+		System.out.println("4. View Schedule");
 		System.out.println("5. Get Money");
 		System.out.println("6. Spend Money");
 		System.out.println("7. The Money Left");			
-		System.out.println("8. Show a menu"); //menu로 돌아가는 항목이 없어서 새로 추가했습니다.
+		System.out.println("8. Show a menu");
 		System.out.println("9. Go Out");
 		System.out.print("Select one number: ");
 		num = in.nextFloat();
