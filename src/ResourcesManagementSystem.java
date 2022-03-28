@@ -23,47 +23,96 @@ public class ResourcesManagementSystem {
 			System.out.print("Select one number: ");
 			num = in.nextFloat();
 			if (num == 1) {
-				System.out.print("Date(ex: 3.17): ");
-				float date = in.nextFloat();
-				System.out.print("Memo: ");
-				String memo1 = input.nextLine(); 
-
+				addSchedule();
 			}
-			if (num == 2) {
-				//Delete Schedule
+			else if (num == 2) {
+				deleteSchedule();
 			}
 
-			if (num == 3) {
-				//Edit Schedule
+			else if (num == 3) {
+				editSchedule();
 			}
 
-			if (num == 4) {
-				//View Schedule
+			else if (num == 4) {
+				viewSchedule();
 			}
 
-			if (num == 5) {
-				System.out.print("Add money: ");
-				float addMoney = in.nextFloat();
-				System.out.print("Memo: ");
-				String sentance5 = input.nextLine();
-
+			else if (num == 5) {
+				getMoney();		
 			}
 
-			if (num == 6) {
-				System.out.print("Spend money: ");
-				float spendMoney = in.nextFloat();
-				System.out.print("Memo: ");
-				String sentance5 = input.nextLine();
+			else if (num == 6) {
+				spendMoney();
 			}
-			if (num == 7) {
-				//The Money Left
+			else if (num == 7) {
+				theMoneyLeft();
 			}
-			if (num == 8) {
-				//Show a menu
+			else if (num == 8) {
+				showAMenu();
 			}
-
+			else {
+				continue;
+			}
 		}
-		in.close();
-		input.close();
+	}
+
+	public static void addSchedule() {
+		Scanner in;
+		in = new Scanner(System.in);
+		Scanner input;
+		input = new Scanner(System.in);
+		System.out.print("Date(ex: 3.17): ");
+		float date = in.nextFloat();
+		System.out.print("Memo: ");
+		String memo1 = input.nextLine(); 
+		
+	}
+	public static void deleteSchedule() {
+		Scanner in;
+		in = new Scanner(System.in);
+		Scanner input;
+		input = new Scanner(System.in);
+	}
+	public static void editSchedule() {
+		Scanner in;
+		in = new Scanner(System.in);
+		Scanner input;
+		input = new Scanner(System.in);
+	}
+	public static void viewSchedule() {
+		Scanner in;
+		in = new Scanner(System.in);
+		Scanner input;
+		input = new Scanner(System.in);
+	}
+	public static void getMoney() {
+		Scanner in;
+		in = new Scanner(System.in);
+		Scanner input;
+		input = new Scanner(System.in);
+		System.out.print("Add money: ");
+		float addMoney = in.nextFloat();
+		System.out.print("Memo: ");
+		String sentance5 = input.nextLine();		
+	}
+	public static void spendMoney() {
+		Scanner in;
+		in = new Scanner(System.in);
+		Scanner input;
+		input = new Scanner(System.in);
+		System.out.print("Spend money: ");
+		float spendMoney = in.nextFloat();
+		System.out.print("Memo: ");
+		String sentance5 = input.nextLine();
+	}
+	public static void theMoneyLeft() {
+		Scanner in;
+		in = new Scanner(System.in);
+		Scanner input;
+	}
+	public static void showAMenu() {
+		Scanner in;
+		in = new Scanner(System.in);
+		Scanner input;
 	}
 }
