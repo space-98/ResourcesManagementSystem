@@ -11,12 +11,12 @@ public class ResourcesManagementSystem {
 			System.out.println("1. Add Schedule");
 			System.out.println("2. Delete Schedule");
 			System.out.println("3. Edit Schedule");
-			System.out.println("4. View Schedule");
+			System.out.println("4. View Schedules");
 			System.out.println("5. Get Money");
 			System.out.println("6. Spend Money");
-			System.out.println("7. The Money Left");			
+			System.out.println("7. The Money Lefts");			
 			System.out.println("8. Go Out");
-			System.out.print("Select one number: ");
+			System.out.print("Select one number between 1 - 8: ");
 			num = in.nextFloat();
 			if (num == 1) {
 				resourcesManager.addSchedule();
@@ -30,7 +30,7 @@ public class ResourcesManagementSystem {
 			}
 
 			else if (num == 4) {
-				resourcesManager.viewSchedule();
+				resourcesManager.viewSchedules();
 			}
 
 			else if (num == 5) {

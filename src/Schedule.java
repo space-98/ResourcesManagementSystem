@@ -1,5 +1,4 @@
-
-public class Schedule {
+ public class Schedule {
 	//ÇÊµå¸¦ ¸¸µë
 	float schedule;
 	float date;
@@ -24,6 +23,4 @@ public class Schedule {
 		System.out.println("date: " + date + "\n" + "memo1: " + memo1);
 		System.out.println();
 	}
-	
-
 }
