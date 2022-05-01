@@ -8,6 +8,7 @@ public class ResourcesManagementSystem {
 		
 		float num = 0; 
 		while (num != 8) {
+			System.out.println("***ResouresManager***");
 			System.out.println("1. Add Schedule");
 			System.out.println("2. Delete Schedule");
 			System.out.println("3. Edit Schedule");
@@ -48,6 +49,4 @@ public class ResourcesManagementSystem {
 			}
 		}
 	}
-
-
 }

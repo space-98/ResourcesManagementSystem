@@ -1,16 +1,13 @@
 public class Money {
-	//필드를 만듬
+	
 	float addMoney;
 	String memo5;
 	float spendMoney;
 	String memo6;
 
-
-	//기본 생성자 만들기
 	public Money() {
 	}
-
-	//생성자 만들기
+	
 	public Money(float addMoney, String memo5, float spendMoney, String memo6) {
 		this.addMoney = addMoney;
 		this.memo5 = memo5;	
