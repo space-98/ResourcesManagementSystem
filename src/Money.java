@@ -20,5 +20,4 @@ public class Money {
 		System.out.println("SpendMoney: " + spendMoney + "\n" + "Memo6: " + memo6);
 		System.out.println("LeftMoney: " + (addMoney - spendMoney));
 	}
-
 }

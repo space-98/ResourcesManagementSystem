@@ -2,8 +2,14 @@ import java.util.ArrayList;
 
 import java.util.Scanner;
 
+import schedule.GeneralSchedule;
+import schedule.ScheduleInput;
+import schedule.ScheduleKind;
+import schedule.SchoolSchedule;
+import schedule.SpecialSchedule;
+
 public class ResouresManager {
-	ArrayList<Schedule> schedules = new ArrayList<Schedule>();
+	ArrayList<ScheduleInput> schedules = new ArrayList<ScheduleInput>();
 	Money money;
 	Scanner in;
 	ResouresManager(Scanner in) 
@@ -14,7 +20,7 @@ public class ResouresManager {
 	public void addSchedule() 
 	{
 		int kind = 0;
-		Schedule schedule;
+		ScheduleInput scheduleInput;
 		while(kind != 1 && kind != 2) {
 			System.out.println("1. GeneralSchedule");
 			System.out.println("2. SpecialSchedule");
@@ -22,21 +28,21 @@ public class ResouresManager {
 			System.out.print("Select num for Schedule Kind 1 or 2 or 3: ");
 			kind = in.nextInt();
 			if (kind == 1) {
-				schedule = new GeneralSchedule(ScheduleKind.GeneralSchedule);
-				schedule.getUserInput(in);
-				schedules.add(schedule);
+				scheduleInput = new GeneralSchedule(ScheduleKind.GeneralSchedule);
+				scheduleInput.getUserInput(in);
+				schedules.add(scheduleInput);
 				break;
 			}
 			else if (kind == 2) {
-				schedule = new SpecialSchedule(ScheduleKind.SpecialSchedule);
-				schedule.getUserInput(in);
-				schedules.add(schedule);
+				scheduleInput = new SpecialSchedule(ScheduleKind.SpecialSchedule);
+				scheduleInput.getUserInput(in);
+				schedules.add(scheduleInput);
 				break;
 			}
 			else if (kind == 3) {
-				schedule = new SchoolSchedule(ScheduleKind.SchoolSchedule);
-				schedule.getUserInput(in);
-				schedules.add(schedule);
+				scheduleInput = new SchoolSchedule(ScheduleKind.SchoolSchedule);
+				scheduleInput.getUserInput(in);
+				schedules.add(scheduleInput);
 				break;
 			}
 			else {
@@ -60,7 +66,7 @@ public class ResouresManager {
 		}
 		if (index >= 0) {
 			schedules.remove(index);
-			System.out.println("the schedule" + scheduleDate + "is deleted");
+			System.out.println("the schedule " + scheduleDate + " is deleted");
 		}
 		else {
 			System.out.println("the schedule has not been registered");
@@ -74,8 +80,8 @@ public class ResouresManager {
 		System.out.print("Date(ex: 3.17): ");
 		float scheduleDate = in.nextFloat();
 		for (int i = 0; i<schedules.size(); i++) {
-			Schedule schedule = schedules.get(i);
-			if (schedule.getDate() == scheduleDate) {
+			ScheduleInput scheduleInput = schedules.get(i);
+			if (scheduleInput.getDate() == scheduleDate) {
 				float num = -1;
 				while (num != 3) {
 					System.out.println("1. Edit Date");
@@ -86,13 +92,13 @@ public class ResouresManager {
 					if (num == 1) {
 						System.out.print("Date: ");
 						float date = in.nextFloat();
-						schedule.setDate(date);
+						scheduleInput.setDate(date);
 					}
 					else if (num == 2) {
 						System.out.print("memo: ");
 						String memo1 = in.nextLine();
-						//String memo1 = in.next();
-						schedule.setMemo1(memo1);
+						scheduleInput.setMemo1(memo1);
+						String b1 = in.next();
 
 					}
 					else {
@@ -141,5 +147,5 @@ public class ResouresManager {
 		System.out.println();
 	}
 
-}
+} 
 
