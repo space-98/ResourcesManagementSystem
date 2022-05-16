@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import schedule.GeneralSchedule;
@@ -22,58 +22,76 @@ public class ResouresManager {
 		int kind = 0;
 		ScheduleInput scheduleInput;
 		while(kind != 1 && kind != 2) {
-			System.out.println("1. GeneralSchedule");
-			System.out.println("2. SpecialSchedule");
-			System.out.println("3. SchoolSchedule");
-			System.out.print("Select num for Schedule Kind 1 or 2 or 3: ");
-			kind = in.nextInt();
-			if (kind == 1) {
-				scheduleInput = new GeneralSchedule(ScheduleKind.GeneralSchedule);
-				scheduleInput.getUserInput(in);
-				schedules.add(scheduleInput);
-				break;
-			}
-			else if (kind == 2) {
-				scheduleInput = new SpecialSchedule(ScheduleKind.SpecialSchedule);
-				scheduleInput.getUserInput(in);
-				schedules.add(scheduleInput);
-				break;
-			}
-			else if (kind == 3) {
-				scheduleInput = new SchoolSchedule(ScheduleKind.SchoolSchedule);
-				scheduleInput.getUserInput(in);
-				schedules.add(scheduleInput);
-				break;
-			}
-			else {
-				System.out.print("Select num for Schedule Kind 1 or 2 or 3: "); 
+			try {
+				System.out.println("1. GeneralSchedule");
+				System.out.println("2. SpecialSchedule");
+				System.out.println("3. SchoolSchedule");
+				System.out.print("Select num for Schedule Kind 1 or 2 or 3: ");
+				kind = in.nextInt();
+				if (kind == 1) {
+					scheduleInput = new GeneralSchedule(ScheduleKind.GeneralSchedule);
+					scheduleInput.getUserInput(in);
+					schedules.add(scheduleInput);
+					break;
+				}
+				else if (kind == 2) {
+					scheduleInput = new SpecialSchedule(ScheduleKind.SpecialSchedule);
+					scheduleInput.getUserInput(in);
+					schedules.add(scheduleInput);
+					break;
+				}
+				else if (kind == 3) {
+					scheduleInput = new SchoolSchedule(ScheduleKind.SchoolSchedule);
+					scheduleInput.getUserInput(in);
+					schedules.add(scheduleInput);
+					break;
+				}
+				else {
+					System.out.print("Select num for Schedule Kind 1 or 2 or 3: "); 
+				}
+			} catch (InputMismatchException e){
+				System.out.println("Please put an integer between 1 and 3!");
+
+				if(in.hasNext()) {
+					in.next();
+				}
+				kind = -1;
 			}
 		}
 	}
 
 	public void deleteSchedule() 
 	{
-		System.out.print("Date(ex: 3.17): ");
-		float scheduleDate = in.nextFloat();
-		int index = -1; 
-		for (int i = 0; i<schedules.size(); i++) {
-			if (schedules.get(i).getDate() == scheduleDate) 
-			{
-				index = i;
-				break;
-			}
+		try {
+			System.out.print("Date(ex: 3.17): ");
+			float scheduleDate = in.nextFloat();
+			int index = -1; 
+			for (int i = 0; i<schedules.size(); i++) {
+				if (schedules.get(i).getDate() == scheduleDate) 
+				{
+					index = i;
+					break;
+				}
 
-		}
-		if (index >= 0) {
-			schedules.remove(index);
-			System.out.println("the schedule " + scheduleDate + " is deleted");
-		}
-		else {
-			System.out.println("the schedule has not been registered");
-			System.out.println();
-			return;
+			}
+			if (index >= 0) {
+				schedules.remove(index);
+				System.out.println("the schedule " + scheduleDate + " is deleted");
+			}
+			else {
+				System.out.println("the schedule has not been registered");
+				System.out.println();
+				return;
+			}
+		}catch (InputMismatchException e){
+			System.out.println("Please put an realNumber!");
+
+			if(in.hasNext()) {
+				in.next();
+			}
 		}
 	}
+
 
 	public void editSchedule() 
 	{
@@ -120,25 +138,39 @@ public class ResouresManager {
 
 	public void getMoney() 
 	{
-		money = new Money();
-		System.out.print("Add money: ");
-		money.addMoney = in.nextFloat();
-		in.nextLine();
-		System.out.print("Memo: ");
-		money.memo5 = in.nextLine();
-		System.out.println();
+		try {
+			money = new Money();
+			System.out.print("Add money: ");
+			money.addMoney = in.nextFloat();
+			in.nextLine();
+			System.out.print("Memo: ");
+			money.memo5 = in.nextLine();
+			System.out.println();
+		}catch (InputMismatchException e){
+			System.out.println("Please put an realNumber!");
 
+			if(in.hasNext()) {
+				in.next();
+			}
+		}
 	}
 
 	public void spendMoney() 
 	{
-		System.out.print("Spend money: ");
-		money.spendMoney = in.nextFloat();
-		in.nextLine();
-		System.out.print("Memo: ");
-		money.memo6 = in.nextLine();
-		System.out.println();
+		try {
+			System.out.print("Spend money: ");
+			money.spendMoney = in.nextFloat();
+			in.nextLine();
+			System.out.print("Memo: ");
+			money.memo6 = in.nextLine();
+			System.out.println();
+		}catch (InputMismatchException e){
+			System.out.println("Please put an realNumber!");
 
+			if(in.hasNext()) {
+				in.next();
+			}
+		}
 	}
 
 	public void theMoneyLeft() 

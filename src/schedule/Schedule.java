@@ -1,7 +1,7 @@
 package schedule;
 import java.util.Scanner;
 
-//abstract는 "schedule 객체를 생성하지 않는다"라는 뜻
+
 public abstract class Schedule {
 	protected ScheduleKind kind = ScheduleKind.GeneralSchedule;
 	protected float schedule;
