@@ -1,3 +1,4 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -8,10 +9,15 @@ import schedule.ScheduleKind;
 import schedule.SchoolSchedule;
 import schedule.SpecialSchedule;
 
-public class ResouresManager {
+public class ResouresManager implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1704917188620068124L;
 	ArrayList<ScheduleInput> schedules = new ArrayList<ScheduleInput>();
 	Money money;
-	Scanner in;
+	//transient = Scanner를 저장하고 싶지 않다는 것을 의미
+	transient Scanner in;
 	ResouresManager(Scanner in) 
 	{
 		this.in = in;
@@ -178,6 +184,5 @@ public class ResouresManager {
 		money.printInfo();
 		System.out.println();
 	}
-
 } 
 
