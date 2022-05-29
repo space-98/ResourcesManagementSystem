@@ -25,5 +25,4 @@ public class EventLogger {
 	public void log(String logMessage) {
 		logger.info(logMessage);
 	}
-
 }
