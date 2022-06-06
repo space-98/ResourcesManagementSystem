@@ -1,13 +1,27 @@
 package gui;
 
+import java.util.Vector;
+
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import manager.ResourcesManager;
+import schedule.ScheduleInput;
 
-public class ScheduleViewer extends JFrame {
+public class ScheduleViewer extends JPanel {
 	
-	public ScheduleViewer() {
+	WindowFrame frame;
+	
+	ResourcesManager resourcesManager;
+	
+	public ScheduleViewer(WindowFrame frame, ResourcesManager resourcesManager) {
+		this.frame = frame;
+		this.resourcesManager = resourcesManager;
+		
+		System.out.println("***" + resourcesManager.size() + "***");
+		
 		//model 객체 생성
 		DefaultTableModel model = new DefaultTableModel();
 		
@@ -15,17 +29,20 @@ public class ScheduleViewer extends JFrame {
 		model.addColumn("Date");
 		model.addColumn("Memo");
 		
+		for (int i = 0; i < resourcesManager.size(); i++) {
+			Vector row = new Vector();
+			ScheduleInput si = resourcesManager.get(i);
+			row.add(si.getDate());
+			row.add(si.getMemo1());
+			model.addRow(row);
+		}
+		
 		//table, sp 객체 생성
 		JTable table = new JTable(model);
 		JScrollPane sp = new JScrollPane(table);
 		
 		
 		this.add(sp);
-		//frame 크기 설정
-		this.setSize(300, 300);
-		//frame을 닫았을 때 메모리에서 제거되도록 설정
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//frame이 보이도록 설정
-		this.setVisible(true);
+		
 	}
 }

@@ -7,9 +7,13 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 
-public class ScheduleAdder extends JFrame {
+public class ScheduleAdder extends JPanel {
 	
-	public ScheduleAdder() {
+	WindowFrame frame;
+	
+	public ScheduleAdder(WindowFrame frame) {		
+		this.frame = frame;
+		
 		JPanel panel = new JPanel();
 		panel.setLayout(new SpringLayout());
 		
@@ -34,14 +38,7 @@ public class ScheduleAdder extends JFrame {
 		//3열 2행으로 frame을 설정
 		SpringUtilities.makeCompactGrid(panel, 3, 2, 6, 6, 6, 6);
 		
-		//frame 크기 설정
-		this.setSize(300, 300);
-		//frame을 닫았을 때 메모리에서 제거되도록 설정
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setContentPane(panel);
 		
-		//frame이 보이도록 설정
-		this.setVisible(true);
+		this.add(panel);
 	}
-
 }
