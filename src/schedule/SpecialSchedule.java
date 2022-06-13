@@ -1,8 +1,7 @@
 package schedule;
 import java.util.Scanner;
 
-public class SpecialSchedule extends Schedule implements ScheduleInput {
-	
+public class SpecialSchedule extends Schedule implements ScheduleInput {	
 	public SpecialSchedule(ScheduleKind kind) {
 		this.kind = kind;
 	}
