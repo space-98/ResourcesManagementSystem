@@ -7,10 +7,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import gui.WindowFrame;
 import log.EventLogger;
-
 
 public class ResourcesManagementSystem {
 	static EventLogger logger = new EventLogger("log.txt");
@@ -54,20 +52,6 @@ public class ResourcesManagementSystem {
 					resourcesManager.viewSchedules();
 					logger.log("edit a list of schedule");
 				}
-
-				else if (num == 5) {
-					resourcesManager.getMoney();
-					logger.log("add a money");
-				}
-
-				else if (num == 6) {
-					resourcesManager.spendMoney();
-					logger.log("spend a money");
-				}
-				else if (num == 7) {
-					resourcesManager.theMoneyLeft();
-					logger.log("edit a list of money");
-				}
 				else {
 					continue;
 				}
@@ -85,12 +69,9 @@ public class ResourcesManagementSystem {
 		System.out.println("1. Add Schedule");
 		System.out.println("2. Delete Schedule");
 		System.out.println("3. Edit Schedule");
-		System.out.println("4. View Schedules");
-		System.out.println("5. Get Money");
-		System.out.println("6. Spend Money");
-		System.out.println("7. The Money Lefts");			
-		System.out.println("8. Go Out");
-		System.out.print("Select one number between 1 - 8: ");
+		System.out.println("4. View Schedules");			
+		System.out.println("5. Go Out");
+		System.out.println("Select one number between 1 - 5: ");
 	}
 
 	public static ResourcesManager getObject(String filename) {

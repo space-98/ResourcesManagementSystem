@@ -20,7 +20,6 @@ public class EventLogger {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 	public void log(String logMessage) {
 		logger.info(logMessage);

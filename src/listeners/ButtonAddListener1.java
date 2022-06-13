@@ -2,12 +2,8 @@ package listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
-
-import gui.LeftMoneyViewer;
 import gui.ScheduleAdder;
-import gui.ScheduleViewer;
 import gui.WindowFrame;
 
 public class ButtonAddListener1 implements ActionListener {
@@ -24,5 +20,4 @@ public class ButtonAddListener1 implements ActionListener {
 		ScheduleAdder adder1 = frame.getScheduleAdder();
 		frame.setupPanel(adder1);
 	}
-
 }

@@ -3,7 +3,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import schedule.GeneralSchedule;
 import schedule.Schedule;
 import schedule.ScheduleInput;
@@ -17,13 +16,22 @@ public class ResourcesManager implements Serializable{
 	 */
 	private static final long serialVersionUID = 1704917188620068124L;
 	ArrayList<ScheduleInput> schedules = new ArrayList<ScheduleInput>();
-	Money money;
-	//transient = Scanner를 저장하고 싶지 않다는 것을 의미
 	transient Scanner in;
 	ResourcesManager(Scanner in) 
 	{
 		this.in = in;
 	}
+	
+	public void addSchedule(String date, String memo) {	
+		ScheduleInput scheduleInput = new GeneralSchedule(ScheduleKind.GeneralSchedule);
+		scheduleInput.getUserInput(in);
+		schedules.add(scheduleInput);
+	}
+	
+	public void addSchedule(ScheduleInput scheduleInput) {
+		schedules.add(scheduleInput);
+	}
+
 
 	public void addSchedule() 
 	{
@@ -142,49 +150,6 @@ public class ResourcesManager implements Serializable{
 			schedules.get(i).printInfo();
 		}
 
-	}
-
-	public void getMoney() 
-	{
-		try {
-			money = new Money();
-			System.out.print("Add money: ");
-			money.addMoney = in.nextFloat();
-			in.nextLine();
-			System.out.print("Memo: ");
-			money.memo5 = in.nextLine();
-			System.out.println();
-		}catch (InputMismatchException e){
-			System.out.println("Please put an realNumber!");
-
-			if(in.hasNext()) {
-				in.next();
-			}
-		}
-	}
-
-	public void spendMoney() 
-	{
-		try {
-			System.out.print("Spend money: ");
-			money.spendMoney = in.nextFloat();
-			in.nextLine();
-			System.out.print("Memo: ");
-			money.memo6 = in.nextLine();
-			System.out.println();
-		}catch (InputMismatchException e){
-			System.out.println("Please put an realNumber!");
-
-			if(in.hasNext()) {
-				in.next();
-			}
-		}
-	}
-
-	public void theMoneyLeft() 
-	{
-		money.printInfo();
-		System.out.println();
 	}
 
 	public int size() {

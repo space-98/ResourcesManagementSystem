@@ -6,7 +6,6 @@ public abstract class Schedule implements ScheduleInput, Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -8319281409781224373L;
-	
 	protected ScheduleKind kind = ScheduleKind.GeneralSchedule;
 	protected float schedule;
 	protected float date;
