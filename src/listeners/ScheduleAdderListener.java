@@ -23,7 +23,6 @@ public class ScheduleAdderListener implements ActionListener {
 			JTextField filedDate, 
 			JTextField filedMemo, 
 			ResourcesManager resourcesManager) {
-
 		this.filedDate = filedDate;
 		this.filedMemo = filedMemo;
 		this.resourcesManager = resourcesManager;

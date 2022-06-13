@@ -20,8 +20,7 @@ public class MenuSelection extends JPanel {
 		JPanel panel1 = new JPanel();
 		JPanel panel2 = new JPanel();
 		
-		JLabel label = new JLabel("Menu Selection");
-	
+		JLabel label = new JLabel("Menu Selection");	
 		JButton button1 = new JButton("Add Schedule");
 		JButton button2 = new JButton("Delete Schedule");
 		JButton button3 = new JButton("Edit Schedule");

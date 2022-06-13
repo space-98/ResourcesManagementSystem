@@ -10,8 +10,7 @@ import java.util.Scanner;
 import gui.WindowFrame;
 import log.EventLogger;
 
-public class ResourcesManagementSystem {
-	
+public class ResourcesManagementSystem {	
 	static EventLogger logger = new EventLogger("log.txt");
 
 	public static void main(String[] args) {

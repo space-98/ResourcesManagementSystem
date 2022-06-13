@@ -21,7 +21,6 @@ public class EventLogger {
 			e.printStackTrace();
 		}
 	}
-	
 	public void log(String logMessage) {
 		logger.info(logMessage);
 	}

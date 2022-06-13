@@ -6,7 +6,8 @@ import manager.ResourcesManager;
 
 public class WindowFrame extends JFrame{
 	
-	ResourcesManager resourcesManager;	
+	ResourcesManager resourcesManager;
+	
 	MenuSelection menuselection;
 	ScheduleAdder scheduleAdder;
 	ScheduleViewer scheduleViewer;

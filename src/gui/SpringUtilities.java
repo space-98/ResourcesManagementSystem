@@ -85,7 +85,7 @@ public class SpringUtilities {
         int max = rows * cols;
 
         //Calculate Springs that are the max of the width/height so that all
-        //cells have the same size. 
+        //cells have the same size.
         Spring maxWidthSpring = layout.getConstraints(parent.getComponent(0)).
                                     getWidth();
         Spring maxHeightSpring = layout.getConstraints(parent.getComponent(0)).

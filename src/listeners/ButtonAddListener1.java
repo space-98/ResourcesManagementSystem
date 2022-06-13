@@ -9,7 +9,7 @@ import gui.WindowFrame;
 public class ButtonAddListener1 implements ActionListener {
 
 	WindowFrame frame;
-	
+
 	public ButtonAddListener1(WindowFrame frame) {
 		this.frame = frame;
 	}
@@ -19,6 +19,5 @@ public class ButtonAddListener1 implements ActionListener {
 		JButton b = (JButton) e.getSource();
 		ScheduleAdder adder1 = frame.getScheduleAdder();
 		frame.setupPanel(adder1);
-		
 	}
 }
