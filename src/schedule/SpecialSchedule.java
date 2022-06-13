@@ -30,7 +30,8 @@ public class SpecialSchedule extends Schedule implements ScheduleInput {
 			skind = "SchoolSchedule.";
 			break;
 			default:
-		}		
+		}
+		
 		System.out.println("kind: " + skind + "date: " + date + "\n" + "memo1: " + memo1);
 		System.out.println();
 	}

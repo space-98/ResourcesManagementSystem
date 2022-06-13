@@ -46,5 +46,6 @@ public class ScheduleViewer extends JPanel {
 		JScrollPane sp = new JScrollPane(table);
 
 		this.add(sp); 
+		
 	}
 }

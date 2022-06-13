@@ -51,6 +51,7 @@ public class ScheduleAdderListener implements ActionListener {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+			
 		}
 	}
 }

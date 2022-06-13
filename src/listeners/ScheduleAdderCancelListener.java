@@ -18,5 +18,6 @@ public class ScheduleAdderCancelListener implements ActionListener {
 		frame.getContentPane().add(frame.getMenuselection());
 		frame.revalidate();
 		frame.repaint();
+		
 	}
 }

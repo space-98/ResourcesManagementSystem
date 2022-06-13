@@ -19,5 +19,6 @@ public class ButtonAddListener1 implements ActionListener {
 		JButton b = (JButton) e.getSource();
 		ScheduleAdder adder1 = frame.getScheduleAdder();
 		frame.setupPanel(adder1);
+		
 	}
 }

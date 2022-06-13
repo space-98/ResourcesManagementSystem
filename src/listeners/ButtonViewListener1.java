@@ -49,5 +49,6 @@ public class ButtonViewListener1 implements ActionListener {
 			e.printStackTrace();
 		}
 		return resourcesManager;
+		
 		}
 }
