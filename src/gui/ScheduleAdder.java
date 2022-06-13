@@ -44,7 +44,6 @@ public class ScheduleAdder extends JPanel {
 
 		SpringUtilities.makeCompactGrid(panel, 3, 2, 6, 6, 6, 6);
 
-
 		this.add(panel);
 	}
 }

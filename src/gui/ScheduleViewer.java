@@ -47,6 +47,5 @@ public class ScheduleViewer extends JPanel {
 
 
 		this.add(sp); 
-
 	}
 }

@@ -11,9 +11,7 @@ import schedule.SchoolSchedule;
 import schedule.SpecialSchedule;
 
 public class ResourcesManager implements Serializable{
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1704917188620068124L;
 	ArrayList<ScheduleInput> schedules = new ArrayList<ScheduleInput>();
 	transient Scanner in;

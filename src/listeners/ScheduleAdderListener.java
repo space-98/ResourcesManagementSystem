@@ -37,7 +37,6 @@ public class ScheduleAdderListener implements ActionListener {
 		schedule.setMemo1(filedMemo.getText());
 		resourcesManager.addSchedule(schedule);
 		putObject(resourcesManager, "resourcesManager.ser");
-		 
 		schedule.printInfo();
 
 	}

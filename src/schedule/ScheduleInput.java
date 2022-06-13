@@ -14,6 +14,5 @@ public interface ScheduleInput {
 	
 	public void getUserInput(Scanner in);
 	
-	public void printInfo();
-	
+	public void printInfo();	
 }

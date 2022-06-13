@@ -31,6 +31,7 @@ public class GeneralSchedule extends Schedule implements ScheduleInput {
 			break;
 			default:
 		}		
+		
 		System.out.println("kind: " + skind + "date: " + date + "\n" + "memo1: " + memo1);
 		System.out.println();
 	}
